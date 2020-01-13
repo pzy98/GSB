@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>猿音乐</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="mycontainer">
+			<!-- 模块1【推荐音乐】 -->
+			<div id="template1">
+				<!--简易lunbo -->
+				<div class="lunbo">
+					<img id="pic" src="lunbo/01.jpg" width="370" height="150">
+				</div>
+				<!--列表 -->
+				<div class="content" id="content">
+					<h4>推荐歌曲</h4>
+					<span class="more">歌曲广场</span>
+					<audio id="music1" src="">当前浏览器不支持audio</audio>
+					<!-- 1 
+			<div class="myli">
+				<img src="img/Olly-Murs_thay-girl_guitar.jpg" width="75"height="75" >
+				<div class="text" >
+					<audio id="music1" src="mp3/生僻字.mp3" >
+						当前浏览器不支持audio
+					</audio>
+					<span>生僻字</span><br />
+					<span style="font-size: 13px;">陈柯宇--生僻字</span>
+					<div class="btn">
+						<img id="bf" src="icon/more.png" width="32" height="32">
+					</div>
+				</div>
+			</div>-->
+					<!-- 2 
+			<div class="myli">
+				<img src="img/陈柯宇.jpg" width="75"height="75" >
+				<div class="text">
+					<span>Katy Perry</span><br />
+					<span style="font-size: 12px;">Zedd-365</span>
+					<div class="btn">
+						<img id="bf" src="icon/more.png" width="32" height="32">
+					</div>
+				</div>
+				
+			</div>-->
+
+					<!-- 3 
+			<div class="myli">
+				<img src="img/Zedd.jpg" width="75"height="75" >
+				<div class="text">
+					<span>一百万个不可能</span><br />
+					<span style="font-size: 12px;">Christine Welch--经典咏流传</span>
+					<div class="btn" id="btn">
+						<img src="icon/more.png" >
+					</div>
+				</div>
+			</div>-->
+				</div>
+			</div>
+			<!--template1-->
+			<!-- 模块2【我的音乐】 -->
+			<div id="template2" class="hidden">
+				<!--user_info  -->
+				<div class="user">
+					<!-- 头像 -->
+					<div class="touxiang">
+						<img src="img/头像2.jpg" width="60" height="60">
+					</div>
+					<!-- info -->
+					<table border="0" cellspacing="0" cellpadding="0">
+						<!-- <tr><th>猿工:jakdfk980</th></tr> -->
+						<tr>
+							<td>jakdfk980</td>
+							<td class="grade"><em>LV.8</em></td>
+						</tr>
+					</table>
+				</div>
+				<!-- content -->
+				<div class="mymusic">
+					<!--  -->
+					<div class="list1">
+						<table>
+							<tr>
+								<td class="music_icon"><img src="icon/播放按钮.png" width="25" height="25"></td>
+								<td>最近播放<span>(0)</span></td>
+							</tr>
+							<tr>
+								<td class="music_icon"><img src="icon/下载.png" width="25" height="25"></td>
+								<td>下载管理<span>(0)</span></td>
+							</tr>
+							<tr>
+								<td class="music_icon"><img src="icon/音乐播放器.png" width="25" height="25"></td>
+								<td>1024频道<span>(0)</span></td>
+							</tr>
+							<tr>
+								<td class="music_icon"><img src="icon/五角星.png" width="25" height="25"></td>
+								<td>我的收藏<span>(60)</span></td>
+							</tr>
+						</table>
+					</div>
+					<!--  -->
+					<div class="list2">
+						<details>
+							<summary>创建的歌单<span>(9)</span></summary>
+							<ul>
+								<li>123</li>
+								<li>13</li>
+								<li>3</li>
+								<li>3</li>
+							</ul>
+						</details>
+						<details>
+							<summary>收藏的歌单<span>(16)</span></summary>
+							<ul>
+								<li>123</li>
+								<li>13</li>
+								<li>3</li>
+								<li>3</li>
+							</ul>
+						</details>
+					</div>
+				</div>
+			</div>
+			<!-- 模块3【音乐播放页】 -->
+			<div id="template3" class="hidden">
+				<!-- 歌手大背景图 -->
+				<div class="bj">
+					<!-- 顶部信息条 -->
+					<div class="singer" id="songInfo">
+						<span class="arrow">
+							<img onclick="backIndex()" src="icon/left_arrow1.png" width="30" height="30">
+						</span>
+						<span style="font-size: 20px;" id="songname"></span><br>
+						<div class="donghua" id="singer"></div>
+					</div>
+					<!-- 中间旋转碟片 -->
+					<div class="diepian">
+						<div class="singer-img">
+							<img src="img/Christine%20Welch.jpg" width="150" height="150">
+						</div>
+					</div>
+				</div>
+				<!-- 播放控制 -->
+				<div class="bf-control">
+					<div class="c1">
+						<span class="left-time">00:02</span>
+						<div class="jd-bar"></div>
+						<span class="right-time">03:36</span>
+					</div>
+					<div class="c2">
+						<!-- 循环方式按钮 -->
+						<div class="bf-waybtn">
+							<img src="icon/loop.png">
+						</div>
+						<!-- 按钮组 -->
+						<div class="btn-group">
+							<img style="float: left;" src="icon/prev.png" width="45" height="45">
+							<img src="icon/pause.png" width="48" height="48">
+							<img style="float: right;" src="icon/next.png" width="45" height="45">
+						</div>
+						<!-- 分享按钮 -->
+						<div class="share-btn">
+							<img src="icon/share.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--template3-->
+			<!-- 底部固定导航 -->
+			<nav id="mynav" class="">
+				<!-- 推荐音乐 -->
+				<a id="mya1" onclick="tjmusic()">
+					<img id="icon1" src="icon/music-active.png"><br>
+					<span>推荐音乐</span>
+				</a>
+				<!-- 关于音乐 -->
+				<a id="mya2" onclick="mymusic()">
+					<img id="icon2" src="icon/my.png"><br>
+					<span>我的音乐</span>
+				</a>
+			</nav>
+		</div>
+
+		<!-- 简介 -->
+		<div class="shouming" style="position: fixed; bottom: 30px; text-align: center;">
+			<p style="text-shadow: 3px 6px 3px #B2DBA1;font-weight: bold; font-size: 60px; color:#555555">
+				猿音乐
+			</p>
+			<p style="font-size: 18px; color:#5E5E5E;">@HLsoftware1-pzy-2019</p>
+		</div>
+		<!-- JS -->
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
